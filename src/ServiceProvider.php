@@ -31,7 +31,7 @@ class ServiceProvider extends BaseServiceProvider {
 	 */
 	public function register()
 	{
-		$container->singleton('breadcrumbs', function ($app) {
+		$this->app->singleton('breadcrumbs', function ($app) {
 			$breadcrumbs = $this->app->make('DaveJamesMiller\Breadcrumbs\Manager');
 			$viewPath = __DIR__ . '/../views/';
 
